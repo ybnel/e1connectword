@@ -1,10 +1,11 @@
 import { ILLUSTRATIONS } from './illustrations.js';
-import { LEVELS_DATA } from './data.js';
+import { QUESTION_SETS, LEVELS_DATA } from './data.js';
 import { audio } from './audio.js';
 import { confetti } from './confetti.js';
 
 class BattleGameApp {
   constructor() {
+    this.selectedSet = 'all'; // 'all', 'set1', or 'set2'
     this.targetScore = 5;
     this.roundTimeMax = 15;
     this.roundTimeRemaining = 15;
@@ -45,8 +46,8 @@ class BattleGameApp {
     this.btnReturnLobby = document.getElementById('btn-return-lobby');
 
     // Lobby Elements
+    this.setBtns = document.querySelectorAll('.set-btn');
     this.targetBtns = document.querySelectorAll('.target-btn');
-    this.timerBtns = document.querySelectorAll('.timer-btn');
     this.btnStartBattle = document.getElementById('btn-start-battle');
 
     // Scoreboard
@@ -123,16 +124,6 @@ class BattleGameApp {
         this.targetBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.targetScore = parseInt(btn.dataset.target, 10);
-      });
-    });
-
-    // Lobby Round Timer option buttons
-    this.timerBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        audio.playTap();
-        this.timerBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        this.roundTimeMax = parseInt(btn.dataset.time, 10);
       });
     });
 

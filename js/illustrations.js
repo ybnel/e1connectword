@@ -645,7 +645,279 @@ export const ILLUSTRATIONS = {
     </svg>
   `,
 
-  // Special Combined Badges for Victory & Level Complete
+  // ==================== SET 2 ILLUSTRATIONS ====================
+  // Water + Fall = WATERFALL
+  water: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M80 25 C80 25 45 75 45 105 C45 125 60 142 80 142 C100 142 115 125 115 105 C115 75 80 25 80 25 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="4"/>
+      <path d="M68 95 C68 85 75 70 82 55" stroke="#BAE6FD" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="95" cy="115" r="7" fill="#E0F2FE"/>
+    </svg>
+  `,
+  fall: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cliff ledge -->
+      <path d="M20 50 L75 50 L75 140 L20 140 Z" fill="#64748B"/>
+      <!-- Falling leaf / object -->
+      <path d="M105 55 C120 70 125 95 100 110 C85 95 90 70 105 55 Z" fill="#F97316" stroke="#C2410C" stroke-width="3"/>
+      <!-- Motion lines -->
+      <path d="M100 35 L100 48 M120 42 L115 58 M90 75 L85 105" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  `,
+
+  // Water + Melon = WATERMELON
+  melon: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Watermelon Slice -->
+      <path d="M30 50 C30 115 85 140 135 120 L30 50 Z" fill="#22C55E" stroke="#15803D" stroke-width="4"/>
+      <path d="M36 56 C36 108 82 130 126 114 L36 56 Z" fill="#EF4444"/>
+      <!-- Seeds -->
+      <ellipse cx="65" cy="85" rx="3" ry="5" transform="rotate(-30 65 85)" fill="#1E293B"/>
+      <ellipse cx="85" cy="95" rx="3" ry="5" transform="rotate(-15 85 95)" fill="#1E293B"/>
+      <ellipse cx="60" cy="102" rx="3" ry="5" transform="rotate(-40 60 102)" fill="#1E293B"/>
+      <ellipse cx="102" cy="100" rx="3" ry="5" transform="rotate(10 102 100)" fill="#1E293B"/>
+    </svg>
+  `,
+
+  // Sun + Shine = SUNSHINE
+  shine: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Big Central Sparkle Star -->
+      <path d="M80 20 Q80 80 20 80 Q80 80 80 140 Q80 80 140 80 Q80 80 80 20 Z" fill="#FACC15" stroke="#EAB308" stroke-width="3"/>
+      <!-- Small Sparkles -->
+      <path d="M120 30 Q120 50 100 50 Q120 50 120 70 Q120 50 140 50 Q120 50 120 30 Z" fill="#FDE047"/>
+      <path d="M40 105 Q40 120 25 120 Q40 120 40 135 Q40 120 55 120 Q40 120 40 105 Z" fill="#FDE047"/>
+    </svg>
+  `,
+
+  // Sun + Glasses = SUNGLASSES
+  glasses: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Frame Bridge -->
+      <path d="M70 75 Q80 68 90 75" stroke="#1E293B" stroke-width="5" fill="none"/>
+      <!-- Left Lens -->
+      <path d="M30 65 L70 65 C68 95 55 105 35 100 C25 95 25 75 30 65 Z" fill="#1E293B" stroke="#0F172A" stroke-width="3"/>
+      <path d="M36 72 L48 95" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+      <!-- Right Lens -->
+      <path d="M90 65 L130 65 C135 75 135 95 125 100 C105 105 92 95 90 65 Z" fill="#1E293B" stroke="#0F172A" stroke-width="3"/>
+      <path d="M96 72 L108 95" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+      <!-- Temples -->
+      <path d="M30 65 L18 58 M130 65 L142 58" stroke="#1E293B" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  `,
+
+  // Tree + Fruit = TREEFRUIT
+  fruit: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Apple -->
+      <circle cx="65" cy="95" r="28" fill="#EF4444"/>
+      <path d="M65 67 Q68 55 75 52" stroke="#78350F" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="60" cy="56" rx="8" ry="4" transform="rotate(-30 60 56)" fill="#22C55E"/>
+      <!-- Orange / Pear behind -->
+      <circle cx="102" cy="98" r="24" fill="#F97316"/>
+      <ellipse cx="102" cy="74" rx="4" ry="7" fill="#22C55E"/>
+    </svg>
+  `,
+
+  // Pine + Apple = PINEAPPLE
+  pine: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Pinecone / Evergreen Tree -->
+      <polygon points="80,25 115,70 95,70 125,110 35,110 65,70 45,70" fill="#15803D" stroke="#166534" stroke-width="3"/>
+      <rect x="72" y="110" width="16" height="25" fill="#78350F"/>
+    </svg>
+  `,
+  apple: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Apple Body -->
+      <path d="M80 55 C65 40 35 48 35 85 C35 125 70 138 80 138 C90 138 125 125 125 85 C125 48 95 40 80 55 Z" fill="#EF4444" stroke="#DC2626" stroke-width="3"/>
+      <!-- Stem -->
+      <path d="M80 55 Q83 35 95 30" stroke="#78350F" stroke-width="5" stroke-linecap="round"/>
+      <!-- Leaf -->
+      <path d="M82 45 C95 35 110 40 110 40 C110 40 105 55 90 52 Z" fill="#22C55E"/>
+      <ellipse cx="58" cy="75" rx="6" ry="14" transform="rotate(-20 58 75)" fill="#F87171"/>
+    </svg>
+  `,
+
+  // Apple + Pie = APPLEPIE
+  pie: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Pie Crust & Dish -->
+      <ellipse cx="80" cy="115" rx="55" ry="20" fill="#D97706"/>
+      <path d="M25 95 Q80 125 135 95 L130 115 Q80 140 30 115 Z" fill="#B45309"/>
+      <!-- Pie Dome Crust with Lattice -->
+      <ellipse cx="80" cy="90" rx="55" ry="26" fill="#F59E0B" stroke="#D97706" stroke-width="3"/>
+      <!-- Lattice Slits -->
+      <path d="M60 85 L70 95 M75 80 L85 92 M90 85 L100 95" stroke="#92400E" stroke-width="4" stroke-linecap="round"/>
+      <!-- Steam -->
+      <path d="M65 60 Q60 50 68 40 M80 55 Q85 45 78 35 M95 60 Q90 50 98 40" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  `,
+
+  // Tooth + Fairy = TOOTHFAIRY
+  fairy: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Fairy Wings -->
+      <path d="M80 75 C45 35 25 60 45 90 C60 100 75 85 80 75 Z" fill="#A5F3FC" opacity="0.8"/>
+      <path d="M80 75 C115 35 135 60 115 90 C100 100 85 85 80 75 Z" fill="#A5F3FC" opacity="0.8"/>
+      <!-- Dress -->
+      <polygon points="80,75 65,125 95,125" fill="#EC4899"/>
+      <!-- Head & Hair -->
+      <circle cx="80" cy="58" r="14" fill="#FDE047"/>
+      <!-- Magic Wand -->
+      <line x1="90" y1="85" x2="120" y2="60" stroke="#F59E0B" stroke-width="3"/>
+      <polygon points="120,55 123,62 130,62 124,67 126,74 120,69 114,74 116,67 110,62 117,62" fill="#FBBF24"/>
+    </svg>
+  `,
+
+  // Tooth + Ache = TOOTHACHE
+  ache: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Tooth with pain band & lightning -->
+      <path d="M50 45 C45 30 70 25 80 30 C90 25 115 30 110 45 C105 60 115 90 100 130 C95 140 85 140 85 115 C85 95 75 95 75 115 C75 140 65 140 60 130 C45 90 55 60 50 45 Z" fill="#F8FAFC" stroke="#DC2626" stroke-width="4"/>
+      <!-- Ice pack / bandage on cheek -->
+      <path d="M40 70 Q80 120 120 70" stroke="#38BDF8" stroke-width="12" stroke-linecap="round" fill="none"/>
+      <!-- Pain flash / lightning -->
+      <polygon points="80,25 72,45 84,45 74,68 92,42 80,42" fill="#EF4444"/>
+    </svg>
+  `,
+
+  // Ear + Drum = EARDRUM
+  drum: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Drum Body -->
+      <path d="M35 70 L35 110 C35 125 125 125 125 110 L125 70 Z" fill="#DC2626" stroke="#B91C1C" stroke-width="3"/>
+      <!-- Top Drumhead -->
+      <ellipse cx="80" cy="70" rx="45" ry="18" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+      <!-- Tuning Strings -->
+      <path d="M45 78 L60 118 L75 78 L90 118 L105 78 L115 115" stroke="#FEF08A" stroke-width="3" fill="none"/>
+      <!-- Drumsticks -->
+      <line x1="30" y1="35" x2="72" y2="65" stroke="#78350F" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="74" cy="67" r="4" fill="#B45309"/>
+      <line x1="130" y1="35" x2="88" y2="65" stroke="#78350F" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="86" cy="67" r="4" fill="#B45309"/>
+    </svg>
+  `,
+
+  // Eye + Ball = EYEBALL / Eye + Glass = EYEGLASS
+  eye: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Eye Outline -->
+      <path d="M25 80 C45 45 115 45 135 80 C115 115 45 115 25 80 Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+      <!-- Iris -->
+      <circle cx="80" cy="80" r="24" fill="#0EA5E9"/>
+      <!-- Pupil -->
+      <circle cx="80" cy="80" r="13" fill="#0F172A"/>
+      <!-- Catchlight Sparkle -->
+      <circle cx="74" cy="74" r="5" fill="#FFFFFF"/>
+    </svg>
+  `,
+  glass: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Drinking Glass -->
+      <path d="M45 35 L55 130 C56 138 104 138 105 130 L115 35 Z" fill="#E0F2FE" stroke="#0284C7" stroke-width="4"/>
+      <!-- Water Fill -->
+      <path d="M52 70 L56 126 C60 134 100 134 104 126 L108 70 Z" fill="#38BDF8"/>
+      <ellipse cx="80" cy="70" rx="28" ry="7" fill="#BAE6FD"/>
+      <!-- Ice Cube -->
+      <rect x="70" y="78" width="18" height="18" rx="3" fill="#FFFFFF" opacity="0.8"/>
+    </svg>
+  `,
+
+  // Foot + Print = FOOTPRINT / Foot + Step = FOOTSTEP
+  print: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Footprint Sole -->
+      <ellipse cx="78" cy="98" rx="18" ry="28" fill="#3B82F6"/>
+      <ellipse cx="82" cy="62" rx="14" ry="18" fill="#3B82F6"/>
+      <!-- Toes -->
+      <circle cx="62" cy="40" r="6" fill="#3B82F6"/>
+      <circle cx="75" cy="36" r="5" fill="#3B82F6"/>
+      <circle cx="87" cy="38" r="4.5" fill="#3B82F6"/>
+      <circle cx="97" cy="42" r="4" fill="#3B82F6"/>
+      <circle cx="105" cy="48" r="3.5" fill="#3B82F6"/>
+    </svg>
+  `,
+  step: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- 3D Stairs / Steps -->
+      <polygon points="30,130 70,130 70,100 30,100" fill="#94A3B8"/>
+      <polygon points="70,130 90,115 90,85 70,100" fill="#64748B"/>
+      <polygon points="30,100 70,100 90,85 50,85" fill="#CBD5E1"/>
+
+      <polygon points="50,85 90,85 90,55 50,55" fill="#94A3B8"/>
+      <polygon points="90,85 110,70 110,40 90,55" fill="#64748B"/>
+      <polygon points="50,55 90,55 110,40 70,40" fill="#CBD5E1"/>
+
+      <polygon points="70,40 110,40 130,25 90,25" fill="#E2E8F0"/>
+    </svg>
+  `,
+
+  // Hand + Bag = HANDBAG / Hand + Shake = HANDSHAKE / Hand + Soap = HANDSOAP
+  hand: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Palm -->
+      <path d="M45 75 C45 60 55 58 55 75 L55 50 C55 38 65 38 65 50 L65 42 C65 30 75 30 75 42 L75 48 C75 36 85 36 85 48 L85 85 C85 115 70 135 55 135 C40 135 35 115 35 95 L35 85 C35 75 45 75 45 75 Z" fill="#FBBF24" stroke="#D97706" stroke-width="3"/>
+    </svg>
+  `,
+  bag: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Handbag Handle -->
+      <path d="M60 70 C60 40 100 40 100 70" stroke="#D97706" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <!-- Bag Body -->
+      <path d="M40 70 L120 70 L130 130 C130 135 125 138 120 138 L40 138 C35 138 30 135 30 130 Z" fill="#E11D48" stroke="#BE185D" stroke-width="3"/>
+      <!-- Clasp / Gold Lock -->
+      <rect x="72" y="70" width="16" height="20" rx="3" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+    </svg>
+  `,
+  shake: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Left Hand -->
+      <path d="M25 65 L60 90 L85 80 L70 60 Z" fill="#FBBF24" stroke="#D97706" stroke-width="3"/>
+      <!-- Right Hand Gripping -->
+      <path d="M135 65 L100 90 L75 80 L90 60 Z" fill="#F87171" stroke="#DC2626" stroke-width="3"/>
+      <!-- Clasp Fingers -->
+      <path d="M65 75 Q80 95 95 75" stroke="#1E293B" stroke-width="4" fill="none"/>
+      <!-- Sparkle of Agreement -->
+      <polygon points="80,45 83,52 90,52 84,57 86,64 80,59 74,64 76,57 70,52 77,52" fill="#FACC15"/>
+    </svg>
+  `,
+  soap: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Soap Bar -->
+      <rect x="40" y="75" width="80" height="48" rx="16" fill="#2DD4BF" stroke="#0D9488" stroke-width="4"/>
+      <ellipse cx="65" cy="90" rx="14" ry="6" fill="#99F6E4"/>
+      <!-- Bubbles -->
+      <circle cx="55" cy="50" r="14" fill="#A5F3FC" stroke="#0891B2" stroke-width="2" opacity="0.85"/>
+      <circle cx="50" cy="46" r="4" fill="#FFFFFF"/>
+      <circle cx="95" cy="42" r="18" fill="#A5F3FC" stroke="#0891B2" stroke-width="2" opacity="0.85"/>
+      <circle cx="89" cy="36" r="5" fill="#FFFFFF"/>
+      <circle cx="115" cy="65" r="10" fill="#A5F3FC" stroke="#0891B2" stroke-width="2" opacity="0.85"/>
+    </svg>
+  `,
+
+  // Mail + Box = MAILBOX
+  mail: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Envelope -->
+      <rect x="30" y="50" width="100" height="65" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="3"/>
+      <path d="M30 52 L80 90 L130 52" stroke="#64748B" stroke-width="3" fill="none"/>
+      <!-- Stamp -->
+      <rect x="105" y="58" width="18" height="22" fill="#EF4444" stroke="#DC2626" stroke-width="1"/>
+    </svg>
+  `,
+  box: `
+    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cardboard Box 3D -->
+      <polygon points="80,35 130,60 80,85 30,60" fill="#D97706"/>
+      <polygon points="30,60 80,85 80,135 30,110" fill="#B45309"/>
+      <polygon points="80,85 130,60 130,110 80,135" fill="#92400E"/>
+      <!-- Tape -->
+      <polygon points="75,37 85,42 85,87 75,82" fill="#FDE68A"/>
+    </svg>
+  `,
+
+  // Special Combined Badges
   successCrown: `
     <svg viewBox="0 0 120 120" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
       <polygon points="60,25 75,55 105,40 92,85 28,85 15,40 45,55" fill="#FBBF24" stroke="#D97706" stroke-width="3"/>
