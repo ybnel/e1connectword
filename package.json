@@ -1,0 +1,24 @@
+{
+  "name": "webgamesconnectword",
+  "version": "1.0.0",
+  "description": "Interactive Guess the Compound Word Minigame",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "keywords": [
+    "minigame",
+    "compound-word",
+    "educational-game",
+    "english-learning"
+  ],
+  "author": "Cornerlius Indra",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}
