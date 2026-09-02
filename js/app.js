@@ -6,8 +6,8 @@ import { confetti } from './confetti.js';
 class BattleGameApp {
   constructor() {
     this.targetScore = 5;
-    this.roundTimeMax = 15;
-    this.roundTimeRemaining = 15;
+    this.roundTimeMax = 20;
+    this.roundTimeRemaining = 20;
     this.timerInterval = null;
     this.pendingTimeouts = [];
     this.isRoundLocked = false;
