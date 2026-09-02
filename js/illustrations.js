@@ -1,942 +1,319 @@
+// illustrations.js - Clue illustrations for all compound word questions
+
 export const ILLUSTRATIONS = {
   // Level 1: Butter + Fly = BUTTERFLY
   butter: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Dish/Plate -->
-      <ellipse cx="80" cy="120" rx="65" ry="22" fill="#E2E8F0"/>
-      <ellipse cx="80" cy="116" rx="60" ry="18" fill="#F8FAFC"/>
-      <!-- Butter Block -->
-      <path d="M40 95 L65 65 L115 65 L95 95 Z" fill="#FDE047"/>
-      <path d="M40 95 L40 108 L95 108 L95 95 Z" fill="#FACC15"/>
-      <path d="M95 95 L115 65 L115 78 L95 108 Z" fill="#EAB308"/>
-      <!-- Slice Cut & Shine -->
-      <path d="M48 90 L70 68 L78 68 L56 90 Z" fill="#FEF08A" opacity="0.6"/>
-      <circle cx="85" cy="85" r="3" fill="#FEF08A"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9XDfK0TN9qsQcMn0i6SZYEMxhffFgYSorHe-3iRc1L82Pk59NQ6BWXc&s=10" alt="Butter" class="svg-art image-art" />
   `,
   fly: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Wings -->
-      <ellipse cx="60" cy="60" rx="28" ry="18" transform="rotate(-35 60 60)" fill="#BAE6FD" opacity="0.8" stroke="#38BDF8" stroke-width="3"/>
-      <ellipse cx="100" cy="60" rx="28" ry="18" transform="rotate(35 100 60)" fill="#BAE6FD" opacity="0.8" stroke="#38BDF8" stroke-width="3"/>
-      <!-- Body -->
-      <ellipse cx="80" cy="95" rx="16" ry="26" fill="#334155"/>
-      <ellipse cx="80" cy="65" rx="14" ry="14" fill="#1E293B"/>
-      <!-- Eyes -->
-      <circle cx="73" cy="60" r="6" fill="#EF4444"/>
-      <circle cx="87" cy="60" r="6" fill="#EF4444"/>
-      <circle cx="74" cy="58" r="2" fill="white"/>
-      <circle cx="88" cy="58" r="2" fill="white"/>
-      <!-- Antennae -->
-      <path d="M75 52 Q70 40 64 42" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
-      <path d="M85 52 Q90 40 96 42" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
-      <!-- Legs -->
-      <path d="M64 90 L48 96 M64 105 L50 115 M96 90 L112 96 M96 105 L110 115" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYGvyVPyzd14OCqQX8msdbiuhgJvuoorTC1xzW5UJ6qsiMemNAqw1LwUtD&s=10" alt="Fly" class="svg-art image-art" />
   `,
 
   // Level 2: Sun + Flower = SUNFLOWER
   sun: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Sun Rays -->
-      <g stroke="#F59E0B" stroke-width="6" stroke-linecap="round">
-        <line x1="80" y1="20" x2="80" y2="35"/>
-        <line x1="80" y1="125" x2="80" y2="140"/>
-        <line x1="20" y1="80" x2="35" y2="80"/>
-        <line x1="125" y1="80" x2="140" y2="80"/>
-        <line x1="38" y1="38" x2="49" y2="49"/>
-        <line x1="111" y1="111" x2="122" y2="122"/>
-        <line x1="38" y1="122" x2="49" y2="111"/>
-        <line x1="111" y1="49" x2="122" y2="38"/>
-      </g>
-      <!-- Sun Core -->
-      <circle cx="80" cy="80" r="36" fill="#FBBF24"/>
-      <circle cx="80" cy="80" r="32" fill="#FDE047"/>
-      <!-- Cute Face -->
-      <circle cx="70" cy="76" r="4" fill="#92400E"/>
-      <circle cx="90" cy="76" r="4" fill="#92400E"/>
-      <path d="M72 87 Q80 95 88 87" stroke="#92400E" stroke-width="3" stroke-linecap="round" fill="none"/>
-      <ellipse cx="64" cy="83" rx="4" ry="2" fill="#F87171" opacity="0.6"/>
-      <ellipse cx="96" cy="83" rx="4" ry="2" fill="#F87171" opacity="0.6"/>
-    </svg>
+    <img src="https://media.istockphoto.com/id/1124567572/id/vektor/ikon-matahari-datar-yang-lucu.jpg?s=612x612&w=0&k=20&c=B9KWa3-XjuaClBcs_N1XrsKfbb4b6xw_okVhJ6ksirQ=" alt="Sun" class="svg-art image-art" />
   `,
   flower: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Stem and Leaves -->
-      <path d="M80 80 Q78 120 80 145" stroke="#22C55E" stroke-width="7" stroke-linecap="round"/>
-      <path d="M80 115 Q60 110 55 125 Q70 130 80 120" fill="#4ADE80"/>
-      <path d="M80 105 Q100 100 105 115 Q90 120 80 110" fill="#4ADE80"/>
-      <!-- Petals -->
-      <g fill="#F43F5E">
-        <circle cx="80" cy="48" r="18"/>
-        <circle cx="108" cy="65" r="18"/>
-        <circle cx="100" cy="98" r="18"/>
-        <circle cx="60" cy="98" r="18"/>
-        <circle cx="52" cy="65" r="18"/>
-      </g>
-      <!-- Center Core -->
-      <circle cx="80" cy="75" r="17" fill="#FDE047"/>
-      <circle cx="80" cy="75" r="14" fill="#FACC15"/>
-    </svg>
+    <img src="https://png.pngtree.com/png-clipart/20240316/original/pngtree-beautiful-flower-png-illustration-png-image_14607861.png" alt="Flower" class="svg-art image-art" />
   `,
 
   // Level 3: Rain + Coat = RAINCOAT
   rain: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Cloud -->
-      <path d="M50 75 A20 20 0 0 1 70 50 A26 26 0 0 1 115 55 A22 22 0 0 1 125 75 A18 18 0 0 1 115 90 L45 90 A18 18 0 0 1 50 75 Z" fill="#94A3B8"/>
-      <path d="M50 72 A18 18 0 0 1 68 50 A24 24 0 0 1 110 54 A20 20 0 0 1 120 72 L45 72 Z" fill="#CBD5E1"/>
-      <!-- Rain Drops -->
-      <g stroke="#38BDF8" stroke-width="4" stroke-linecap="round">
-        <line x1="55" y1="105" x2="48" y2="125"/>
-        <line x1="75" y1="100" x2="68" y2="120"/>
-        <line x1="95" y1="105" x2="88" y2="125"/>
-        <line x1="115" y1="100" x2="108" y2="120"/>
-        <line x1="65" y1="130" x2="58" y2="148"/>
-        <line x1="85" y1="130" x2="78" y2="148"/>
-        <line x1="105" y1="130" x2="98" y2="148"/>
-      </g>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/7038/7038403.png" alt="Rain" class="svg-art image-art" />
   `,
   coat: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Yellow Raincoat/Jacket -->
-      <path d="M55 45 L80 55 L105 45 L135 75 L118 90 L105 80 L105 135 L55 135 L55 80 L42 90 L25 75 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="3"/>
-      <!-- Collar / Hood -->
-      <path d="M65 42 Q80 30 95 42 L80 60 Z" fill="#EAB308"/>
-      <!-- Zipper / Buttons -->
-      <line x1="80" y1="58" x2="80" y2="135" stroke="#A16207" stroke-width="3" stroke-dasharray="8 6"/>
-      <!-- Pockets -->
-      <rect x="60" y="98" width="15" height="15" rx="3" fill="#EAB308"/>
-      <rect x="85" y="98" width="15" height="15" rx="3" fill="#EAB308"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_JQS1gturZDdQZrkxAMUzQwPr86nId8_vd3SRWoqQnQFf3H1XLagaWTE&s=10" alt="Coat" class="svg-art image-art" />
   `,
 
   // Level 4: Tooth + Brush = TOOTHBRUSH
   tooth: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 45 C45 30 70 25 80 30 C90 25 115 30 110 45 C105 60 115 90 100 130 C95 140 85 140 85 115 C85 95 75 95 75 115 C75 140 65 140 60 130 C45 90 55 60 50 45 Z" fill="#F8FAFC" stroke="#94A3B8" stroke-width="4"/>
-      <!-- Sparkle -->
-      <path d="M115 30 L118 38 L126 41 L118 44 L115 52 L112 44 L104 41 L112 38 Z" fill="#38BDF8"/>
-      <ellipse cx="68" cy="55" rx="6" ry="12" fill="#FFFFFF"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfx14QrDXPCqVXWw-_f586MahD1LApn4VFHo6WZ_Im3MRJnqPPQ9NWSSc&s=10" alt="Tooth" class="svg-art image-art" />
   `,
   brush: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Brush Wooden/Color Handle -->
-      <path d="M125 25 C132 32 132 40 125 47 L65 107 L45 87 L105 27 C112 20 118 20 125 25 Z" fill="#F59E0B" stroke="#D97706" stroke-width="3"/>
-      <!-- Metal Ferrule -->
-      <path d="M65 107 L45 87 L35 97 L55 117 Z" fill="#94A3B8" stroke="#64748B" stroke-width="2"/>
-      <!-- Bristles Fan -->
-      <path d="M35 97 L55 117 L30 142 C20 145 15 140 18 130 Z" fill="#EC4899" stroke="#BE185D" stroke-width="2"/>
-      <path d="M24 112 L44 132" stroke="#FDA4AF" stroke-width="3" stroke-linecap="round"/>
-      <path d="M30 106 L50 126" stroke="#FDA4AF" stroke-width="3" stroke-linecap="round"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB5V9cNTNJipyLilNKgLg7ofzZvNn_LGz9BaYwDfqjAdlagaMm8HfARB_U&s=10" alt="Brush" class="svg-art image-art" />
   `,
 
   // Level 5: Horse + Shoe = HORSESHOE
   horse: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Horse Head Silhouette -->
-      <path d="M55 130 L65 95 L55 80 L60 55 L85 40 L95 40 L90 55 L115 80 L110 105 L95 110 L95 130 Z" fill="#B45309"/>
-      <!-- Mane -->
-      <path d="M58 55 Q45 70 48 95 Q40 105 45 125" stroke="#78350F" stroke-width="8" stroke-linecap="round"/>
-      <!-- Ear -->
-      <path d="M85 40 L90 25 L98 40 Z" fill="#92400E"/>
-      <!-- Eye & Snout -->
-      <circle cx="85" cy="65" r="4" fill="#1E293B"/>
-      <circle cx="108" cy="98" r="3" fill="#78350F"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV_1cKQgRSlP_ZcuH1w5SFpHT5nHNdP5ctC3Kq1tazSQ&s=10" alt="Horse" class="svg-art image-art" />
   `,
   shoe: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Sneaker / Shoe -->
-      <path d="M30 105 C30 90 45 80 65 80 L90 75 C105 60 120 70 125 90 L135 105 L135 120 L30 120 Z" fill="#EF4444" stroke="#B91C1C" stroke-width="3"/>
-      <path d="M25 120 L140 120 L140 128 L25 128 Z" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
-      <!-- Toe Cap & Laces -->
-      <path d="M115 90 C125 90 135 98 135 115 L115 115 Z" fill="#FFFFFF"/>
-      <line x1="75" y1="82" x2="88" y2="92" stroke="white" stroke-width="3" stroke-linecap="round"/>
-      <line x1="82" y1="78" x2="95" y2="88" stroke="white" stroke-width="3" stroke-linecap="round"/>
-    </svg>
+    <img src="https://freepngimg.com/thumb/adidas_shoes/3-2-adidas-shoes-png-clipart.png" alt="Shoe" class="svg-art image-art" />
   `,
 
   // Level 6: Cow + Boy = COWBOY
   cow: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Cow Head -->
-      <ellipse cx="80" cy="85" rx="42" ry="38" fill="#F8FAFC" stroke="#334155" stroke-width="3"/>
-      <!-- Horns -->
-      <path d="M50 60 Q40 40 30 45" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
-      <path d="M110 60 Q120 40 130 45" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
-      <!-- Ears -->
-      <ellipse cx="40" cy="70" rx="14" ry="8" transform="rotate(-20 40 70)" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
-      <ellipse cx="120" cy="70" rx="14" ry="8" transform="rotate(20 120 70)" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
-      <!-- Black Spot -->
-      <path d="M60 55 C55 70 70 75 75 60 C75 52 65 50 60 55 Z" fill="#1E293B"/>
-      <!-- Snout -->
-      <ellipse cx="80" cy="100" rx="28" ry="18" fill="#F472B6"/>
-      <circle cx="70" cy="100" r="3" fill="#831843"/>
-      <circle cx="90" cy="100" r="3" fill="#831843"/>
-      <!-- Eyes -->
-      <circle cx="65" cy="78" r="4" fill="#1E293B"/>
-      <circle cx="95" cy="78" r="4" fill="#1E293B"/>
-    </svg>
+    <img src="https://png.pngtree.com/png-clipart/20241226/original/pngtree-cute-cow-icon-vector-art-png-image_18204215.png" alt="Cow" class="svg-art image-art" />
   `,
   boy: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Boy Face -->
-      <circle cx="80" cy="82" r="35" fill="#FED7AA"/>
-      <!-- Hair -->
-      <path d="M45 75 C45 45 60 40 80 40 C100 40 115 45 115 75 C105 60 95 62 85 58 C75 62 60 58 45 75 Z" fill="#78350F"/>
-      <!-- Eyes & Smile -->
-      <circle cx="68" cy="80" r="4" fill="#1E293B"/>
-      <circle cx="92" cy="80" r="4" fill="#1E293B"/>
-      <path d="M72 95 Q80 102 88 95" stroke="#9A3412" stroke-width="3" stroke-linecap="round" fill="none"/>
-      <!-- Shirt Collar -->
-      <path d="M55 125 Q80 135 105 125 L115 145 L45 145 Z" fill="#3B82F6"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvcX2fywfgynYG02P7waYQ58gGCJa9Nff3StpDQUKyg&s=10" alt="Boy" class="svg-art image-art" />
   `,
 
   // Level 7: Fire + Fly = FIREFLY
   fire: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Outer Flame -->
-      <path d="M80 25 C95 50 120 75 120 105 C120 128 102 142 80 142 C58 142 40 128 40 105 C40 80 60 60 70 45 C75 60 85 65 80 25 Z" fill="#EA580C"/>
-      <!-- Inner Flame -->
-      <path d="M80 60 C90 80 105 95 105 115 C105 130 94 138 80 138 C66 138 55 130 55 115 C55 98 70 85 75 75 C78 85 85 88 80 60 Z" fill="#FACC15"/>
-      <!-- Core Spark -->
-      <ellipse cx="80" cy="120" rx="12" ry="14" fill="#FEF08A"/>
-    </svg>
+    <img src="https://png.pngtree.com/png-clipart/20250103/original/pngtree-fire-icon-png-image_4766827.png" alt="Fire" class="svg-art image-art" />
   `,
 
   // Level 8: Sea + Shell = SEASHELL
   sea: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Ocean Waves -->
-      <path d="M20 70 Q40 50 60 70 T100 70 T140 70 L140 135 L20 135 Z" fill="#0284C7"/>
-      <path d="M20 90 Q40 70 60 90 T100 90 T140 90 L140 135 L20 135 Z" fill="#0369A1"/>
-      <path d="M20 110 Q40 95 60 110 T100 110 T140 110 L140 135 L20 135 Z" fill="#075985"/>
-      <!-- White Caps / Foam -->
-      <circle cx="58" cy="70" r="5" fill="#E0F2FE"/>
-      <circle cx="98" cy="70" r="5" fill="#E0F2FE"/>
-      <circle cx="138" cy="70" r="5" fill="#E0F2FE"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/284/284483.png" alt="Sea" class="svg-art image-art" />
   `,
   shell: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Seashell -->
-      <path d="M80 135 L60 120 C35 95 40 55 80 50 C120 55 125 95 100 120 Z" fill="#F472B6" stroke="#DB2777" stroke-width="3"/>
-      <!-- Shell Ridges -->
-      <path d="M80 135 L80 50" stroke="#FBCFE8" stroke-width="3"/>
-      <path d="M80 135 L55 60" stroke="#FBCFE8" stroke-width="3"/>
-      <path d="M80 135 L105 60" stroke="#FBCFE8" stroke-width="3"/>
-      <path d="M80 135 L40 75" stroke="#FBCFE8" stroke-width="3"/>
-      <path d="M80 135 L120 75" stroke="#FBCFE8" stroke-width="3"/>
-    </svg>
+    <img src="https://www.shutterstock.com/image-vector/shell-icon-260nw-305913065.jpg" alt="Shell" class="svg-art image-art" />
   `,
 
   // Level 9: Foot + Ball = FOOTBALL
   foot: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Bare Foot / Footprint -->
-      <path d="M60 40 L60 95 C60 120 75 130 95 130 C115 130 125 115 125 95 C125 75 110 65 95 65 L95 40 Z" fill="#FED7AA" stroke="#F97316" stroke-width="3"/>
-      <!-- Toes -->
-      <circle cx="118" cy="70" r="8" fill="#FED7AA" stroke="#F97316" stroke-width="2"/>
-      <circle cx="118" cy="88" r="7" fill="#FED7AA" stroke="#F97316" stroke-width="2"/>
-      <circle cx="118" cy="103" r="6" fill="#FED7AA" stroke="#F97316" stroke-width="2"/>
-      <circle cx="115" cy="116" r="5" fill="#FED7AA" stroke="#F97316" stroke-width="2"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2hVYgWmtxZiCKHvTXXnZ-HC9izRxw87Ek_-tzTf7IAQ&s=10" alt="Foot" class="svg-art image-art" />
   `,
   ball: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Classic Soccer Ball -->
-      <circle cx="80" cy="80" r="48" fill="#F8FAFC" stroke="#1E293B" stroke-width="4"/>
-      <!-- Pentagons / Patterns -->
-      <polygon points="80,62 94,72 89,88 71,88 66,72" fill="#1E293B"/>
-      <line x1="80" y1="62" x2="80" y2="34" stroke="#1E293B" stroke-width="3"/>
-      <line x1="94" y1="72" x2="120" y2="60" stroke="#1E293B" stroke-width="3"/>
-      <line x1="89" y1="88" x2="108" y2="114" stroke="#1E293B" stroke-width="3"/>
-      <line x1="71" y1="88" x2="52" y2="114" stroke="#1E293B" stroke-width="3"/>
-      <line x1="66" y1="72" x2="40" y2="60" stroke="#1E293B" stroke-width="3"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/5213/5213872.png" alt="Ball" class="svg-art image-art" />
   `,
 
   // Level 10: Basket + Ball = BASKETBALL
   basket: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Woven Basket -->
-      <path d="M40 75 L120 75 L110 130 L50 130 Z" fill="#D97706" stroke="#92400E" stroke-width="3"/>
-      <!-- Handle -->
-      <path d="M45 75 C45 35 115 35 115 75" stroke="#B45309" stroke-width="6" stroke-linecap="round" fill="none"/>
-      <!-- Woven Pattern -->
-      <line x1="55" y1="75" x2="62" y2="130" stroke="#B45309" stroke-width="3"/>
-      <line x1="75" y1="75" x2="78" y2="130" stroke="#B45309" stroke-width="3"/>
-      <line x1="95" y1="75" x2="94" y2="130" stroke="#B45309" stroke-width="3"/>
-      <line x1="43" y1="95" x2="117" y2="95" stroke="#92400E" stroke-width="3"/>
-      <line x1="47" y1="112" x2="113" y2="112" stroke="#92400E" stroke-width="3"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/2742/2742601.png" alt="Basket" class="svg-art image-art" />
   `,
 
   // Level 11: Tooth + Paste = TOOTHPASTE
   paste: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Toothpaste Tube -->
-      <path d="M45 130 L115 130 L105 60 L55 60 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="3"/>
-      <!-- Cap -->
-      <rect x="68" y="45" width="24" height="15" rx="3" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
-      <!-- Paste Swirl Squirt -->
-      <path d="M80 45 Q70 25 90 25 Q110 25 105 38" stroke="#EC4899" stroke-width="7" stroke-linecap="round" fill="none"/>
-      <path d="M80 45 Q70 25 90 25 Q110 25 105 38" stroke="#F472B6" stroke-width="3" stroke-linecap="round" fill="none"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvKybrl65T6Mvke1TnXj8FLNGlD4yqpYoQ3yxQ92y3KcgQD9iYZn2TCpNC&s=10" alt="Paste" class="svg-art image-art" />
   `,
 
   // Level 12: Pop + Corn = POPCORN
   pop: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Comic Pop Burst -->
-      <polygon points="80,25 98,52 130,45 118,75 145,95 115,108 122,138 92,125 75,145 68,120 38,132 48,102 20,88 48,72 35,42 68,52" fill="#FBBF24" stroke="#D97706" stroke-width="4"/>
-      <polygon points="80,45 92,62 112,58 105,78 122,92 102,100 108,120 88,110 75,124 70,108 50,115 58,95 38,85 58,75 48,55 70,62" fill="#FEF08A"/>
-      <circle cx="80" cy="85" r="8" fill="#EF4444"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxnKv8tEe2BlTm9kuHDUH2LoQV7VTWWrHQubUzjpJPlA&s=10" alt="Pop" class="svg-art image-art" />
   `,
   corn: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Corn Cob -->
-      <ellipse cx="80" cy="80" rx="22" ry="45" transform="rotate(-20 80 80)" fill="#FACC15" stroke="#CA8A04" stroke-width="3"/>
-      <!-- Corn Kernels Grid -->
-      <circle cx="75" cy="65" r="4" fill="#EAB308"/>
-      <circle cx="88" cy="70" r="4" fill="#EAB308"/>
-      <circle cx="70" cy="82" r="4" fill="#EAB308"/>
-      <circle cx="83" cy="86" r="4" fill="#EAB308"/>
-      <circle cx="76" cy="100" r="4" fill="#EAB308"/>
-      <!-- Husk Leaves -->
-      <path d="M60 120 Q50 80 40 60 Q55 90 70 125 Z" fill="#4ADE80" stroke="#16A34A" stroke-width="2"/>
-      <path d="M90 125 Q115 95 125 70 Q110 95 85 130 Z" fill="#22C55E" stroke="#16A34A" stroke-width="2"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrj2SToh-MGr42JRwXiQUMRJ9VlZXTEZQvhyLRbNZnzg&s=10" alt="Corn" class="svg-art image-art" />
   `,
 
   // Level 13: Rain + Bow = RAINBOW
   bow: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Archery Bow -->
-      <path d="M50 30 Q120 80 50 130" stroke="#92400E" stroke-width="7" stroke-linecap="round" fill="none"/>
-      <line x1="50" y1="30" x2="50" y2="130" stroke="#94A3B8" stroke-width="2"/>
-      <line x1="30" y1="80" x2="110" y2="80" stroke="#D97706" stroke-width="3"/>
-      <polygon points="110,75 125,80 110,85" fill="#EF4444"/>
-      <path d="M35 73 L25 80 L35 87" stroke="#3B82F6" stroke-width="3"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc_BeYLQOBlua7h-qABTtxF2t8eKKqnpnVAe71EPHUUA&s=10" alt="Bow" class="svg-art image-art" />
   `,
 
   // Level 14: Birth + Day = BIRTHDAY
   birth: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Baby in Swaddle -->
-      <ellipse cx="80" cy="95" rx="35" ry="42" fill="#93C5FD"/>
-      <path d="M52 80 Q80 110 108 80" stroke="#60A5FA" stroke-width="4" fill="none"/>
-      <path d="M52 105 Q80 135 108 105" stroke="#60A5FA" stroke-width="4" fill="none"/>
-      <circle cx="80" cy="55" r="24" fill="#FED7AA"/>
-      <circle cx="72" cy="52" r="3" fill="#1E293B"/>
-      <circle cx="88" cy="52" r="3" fill="#1E293B"/>
-      <path d="M76 62 Q80 66 84 62" stroke="#9A3412" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <ellipse cx="67" cy="56" rx="3" ry="2" fill="#F472B6"/>
-      <ellipse cx="93" cy="56" rx="3" ry="2" fill="#F472B6"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8b8f56iIY7t4zZ4N9gWqLvoIcpCP3yGj_wwspDKgFmQ&s=10" alt="Birth" class="svg-art image-art" />
   `,
   day: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Calendar / Daylight -->
-      <rect x="35" y="45" width="90" height="85" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
-      <path d="M35 57 C35 50 40 45 47 45 L113 45 C120 45 125 50 125 57 L125 70 L35 70 Z" fill="#EF4444"/>
-      <circle cx="55" cy="42" r="4" fill="#94A3B8"/>
-      <circle cx="105" cy="42" r="4" fill="#94A3B8"/>
-      <circle cx="80" cy="98" r="14" fill="#FBBF24"/>
-      <line x1="80" y1="78" x2="80" y2="82" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
-      <line x1="80" y1="114" x2="80" y2="118" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
-      <line x1="60" y1="98" x2="64" y2="98" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
-      <line x1="96" y1="98" x2="100" y2="98" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/7123/7123375.png" alt="Day" class="svg-art image-art" />
   `,
 
   // Level 15: Bed + Bug = BEDBUG
   bed: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Bed Frame -->
-      <rect x="25" y="55" width="16" height="75" rx="4" fill="#78350F"/>
-      <rect x="125" y="75" width="14" height="55" rx="4" fill="#78350F"/>
-      <rect x="40" y="80" width="90" height="30" rx="6" fill="#3B82F6"/>
-      <path d="M40 85 L90 85 L90 110 L40 110 Z" fill="#93C5FD"/>
-      <rect x="42" y="70" width="28" height="15" rx="5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
-    </svg>
+    <img src="https://static.vecteezy.com/system/resources/previews/012/488/958/non_2x/bed-icon-vector.jpg" alt="Bed" class="svg-art image-art" />
   `,
   bug: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Ladybug / Beetle Body -->
-      <ellipse cx="80" cy="90" rx="35" ry="40" fill="#EF4444" stroke="#1E293B" stroke-width="3"/>
-      <path d="M60 55 C60 40 100 40 100 55 Z" fill="#1E293B"/>
-      <circle cx="65" cy="80" r="7" fill="#1E293B"/>
-      <circle cx="95" cy="80" r="7" fill="#1E293B"/>
-      <circle cx="70" cy="108" r="6" fill="#1E293B"/>
-      <circle cx="90" cy="108" r="6" fill="#1E293B"/>
-      <line x1="80" y1="55" x2="80" y2="130" stroke="#1E293B" stroke-width="3"/>
-      <path d="M70 42 Q60 25 50 30" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
-      <path d="M90 42 Q100 25 110 30" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561740.png" alt="Bug" class="svg-art image-art" />
   `,
 
   // Level 16: Moon + Light = MOONLIGHT
   moon: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Crescent Moon -->
-      <path d="M100 30 C60 35 45 75 55 110 C65 135 95 140 115 130 C80 120 70 80 100 30 Z" fill="#FACC15" stroke="#EAB308" stroke-width="3"/>
-      <circle cx="115" cy="50" r="3" fill="#FDE047"/>
-      <circle cx="125" cy="80" r="4" fill="#FDE047"/>
-      <circle cx="110" cy="110" r="2.5" fill="#FDE047"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEllEHOjIiU5sREphtFLyPB6cxhcBWG84h77aLcsAF7Q&s=10" alt="Moon" class="svg-art image-art" />
   `,
   light: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Light Bulb -->
-      <path d="M60 70 C60 45 100 45 100 70 C100 85 92 92 90 105 L70 105 C68 92 60 85 60 70 Z" fill="#FEF08A" stroke="#F59E0B" stroke-width="3"/>
-      <rect x="70" y="105" width="20" height="15" rx="3" fill="#94A3B8"/>
-      <line x1="72" y1="110" x2="88" y2="110" stroke="#64748B" stroke-width="2"/>
-      <line x1="72" y1="115" x2="88" y2="115" stroke="#64748B" stroke-width="2"/>
-      <line x1="80" y1="25" x2="80" y2="38" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
-      <line x1="40" y1="45" x2="50" y2="55" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
-      <line x1="120" y1="45" x2="110" y2="55" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
-      <line x1="30" y1="75" x2="44" y2="75" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
-      <line x1="130" y1="75" x2="116" y2="75" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/4020/4020112.png" alt="Light" class="svg-art image-art" />
   `,
 
   // Level 17: Star + Fish = STARFISH
   star: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="80,25 96,65 140,68 105,96 117,138 80,115 43,138 55,96 20,68 64,65" fill="#FBBF24" stroke="#F59E0B" stroke-width="4"/>
-      <circle cx="73" cy="80" r="4" fill="#78350F"/>
-      <circle cx="87" cy="80" r="4" fill="#78350F"/>
-      <path d="M75 90 Q80 96 85 90" stroke="#78350F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/276/276020.png" alt="Star" class="svg-art image-art" />
   `,
   fish: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Blue Fish Body -->
-      <path d="M125 80 C110 50 60 50 35 80 C60 110 110 110 125 80 Z" fill="#0EA5E9" stroke="#0284C7" stroke-width="3"/>
-      <polygon points="35,80 15,55 20,80 15,105" fill="#38BDF8" stroke="#0284C7" stroke-width="2"/>
-      <path d="M75 58 Q85 40 95 58 Z" fill="#38BDF8"/>
-      <circle cx="108" cy="74" r="5" fill="white"/>
-      <circle cx="110" cy="74" r="3" fill="#1E293B"/>
-      <path d="M80 75 Q75 80 80 85 M70 70 Q65 75 70 80" stroke="#BAE6FD" stroke-width="2.5" fill="none"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/8620/8620879.png" alt="Fish" class="svg-art image-art" />
   `,
 
   // Level 18: Gold + Fish = GOLDFISH
   gold: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Gold Coin Stack -->
-      <ellipse cx="80" cy="115" rx="42" ry="18" fill="#D97706"/>
-      <ellipse cx="80" cy="110" rx="42" ry="18" fill="#F59E0B"/>
-      <ellipse cx="80" cy="90" rx="42" ry="18" fill="#D97706"/>
-      <ellipse cx="80" cy="85" rx="42" ry="18" fill="#F59E0B"/>
-      <ellipse cx="80" cy="65" rx="42" ry="18" fill="#D97706"/>
-      <ellipse cx="80" cy="60" rx="42" ry="18" fill="#FDE047"/>
-      <text x="80" y="68" font-size="24" font-weight="900" text-anchor="middle" fill="#B45309">$</text>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/3309/3309977.png" alt="Gold" class="svg-art image-art" />
   `,
 
   // Level 19: Dragon + Fly = DRAGONFLY
   dragon: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Dragon Head -->
-      <path d="M50 120 L40 85 L65 50 L105 50 L120 70 L135 80 L115 95 L95 90 L85 120 Z" fill="#10B981" stroke="#047857" stroke-width="3"/>
-      <polygon points="65,50 60,30 75,45" fill="#F59E0B"/>
-      <polygon points="90,45 95,25 105,48" fill="#F59E0B"/>
-      <circle cx="85" cy="65" r="7" fill="#FEF08A"/>
-      <circle cx="87" cy="65" r="3" fill="#1E293B"/>
-      <circle cx="125" cy="80" r="3" fill="#047857"/>
-      <path d="M128 85 Q145 80 148 95" stroke="#EF4444" stroke-width="4" stroke-linecap="round" fill="none"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/2603/2603009.png" alt="Dragon" class="svg-art image-art" />
   `,
 
   // Level 20: Snow + Man = SNOWMAN
   snow: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Snowflake Crystal -->
-      <g stroke="#38BDF8" stroke-width="5" stroke-linecap="round">
-        <line x1="80" y1="25" x2="80" y2="135"/>
-        <line x1="25" y1="80" x2="135" y2="80"/>
-        <line x1="41" y1="41" x2="119" y2="119"/>
-        <line x1="41" y1="119" x2="119" y2="41"/>
-        <path d="M70 45 L80 35 L90 45 M70 115 L80 125 L90 115" fill="none"/>
-        <path d="M45 70 L35 80 L45 90 M115 70 L125 80 L115 90" fill="none"/>
-      </g>
-      <circle cx="80" cy="80" r="10" fill="#E0F2FE" stroke="#0284C7" stroke-width="3"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/6661/6661508.png" alt="Snow" class="svg-art image-art" />
   `,
   man: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Adult Man / Person -->
-      <circle cx="80" cy="65" r="28" fill="#FED7AA"/>
-      <path d="M52 65 C52 40 70 35 80 35 C95 35 108 40 108 65 C100 50 90 52 80 50 C70 52 60 50 52 65 Z" fill="#334155"/>
-      <path d="M68 78 Q80 84 92 78" stroke="#475569" stroke-width="4" stroke-linecap="round" fill="none"/>
-      <circle cx="70" cy="62" r="3.5" fill="#1E293B"/>
-      <circle cx="90" cy="62" r="3.5" fill="#1E293B"/>
-      <path d="M45 115 C45 98 60 95 80 95 C100 95 115 98 115 115 L120 145 L40 145 Z" fill="#475569"/>
-      <polygon points="80,95 73,115 80,135 87,115" fill="#EF4444"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Man" class="svg-art image-art" />
   `,
 
   // Level 21: Brain + Storm = BRAINSTORM
   brain: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Brain Organ -->
-      <path d="M78 40 C60 40 45 55 45 75 C45 85 50 95 45 105 C40 115 50 128 65 125 C72 125 75 120 78 120 Z" fill="#F472B6" stroke="#DB2777" stroke-width="3"/>
-      <path d="M82 40 C100 40 115 55 115 75 C115 85 110 95 115 105 C120 115 110 128 95 125 C88 125 85 120 82 120 Z" fill="#F472B6" stroke="#DB2777" stroke-width="3"/>
-      <path d="M55 70 Q70 65 65 85 Q75 95 60 105" stroke="#BE185D" stroke-width="3" stroke-linecap="round" fill="none"/>
-      <path d="M105 70 Q90 65 95 85 Q85 95 100 105" stroke="#BE185D" stroke-width="3" stroke-linecap="round" fill="none"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/6969/6969728.png" alt="Brain" class="svg-art image-art" />
   `,
   storm: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Dark Storm Cloud -->
-      <path d="M45 75 A20 20 0 0 1 68 50 A26 26 0 0 1 115 55 A22 22 0 0 1 125 75 L45 75 Z" fill="#475569"/>
-      <!-- Lightning Bolt -->
-      <polygon points="85,70 65,100 80,100 70,135 100,92 82,92" fill="#FACC15" stroke="#EAB308" stroke-width="2"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk4lR5YFPiKEbVZQPy_c3sncPNNB-9H0ZUWovrL3IEvw&s=10" alt="Storm" class="svg-art image-art" />
   `,
 
   // Level 22: Bird + House = BIRDHOUSE
   bird: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40 95 C40 65 75 55 105 60 C115 62 125 55 130 50 C128 65 120 75 115 80 C110 105 80 115 50 110 L30 120 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="3"/>
-      <path d="M60 85 C75 80 90 85 85 100 C75 105 60 98 60 85 Z" fill="#0284C7"/>
-      <polygon points="120,68 135,72 120,78" fill="#F59E0B"/>
-      <circle cx="105" cy="70" r="3.5" fill="#1E293B"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/760/760921.png" alt="Bird" class="svg-art image-art" />
   `,
   house: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="80,30 30,75 130,75" fill="#DC2626" stroke="#991B1B" stroke-width="3"/>
-      <rect x="42" y="75" width="76" height="60" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
-      <rect x="68" y="95" width="24" height="40" rx="3" fill="#B45309"/>
-      <circle cx="86" cy="115" r="2.5" fill="#FDE047"/>
-      <rect x="95" y="85" width="16" height="16" rx="2" fill="#38BDF8"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/5988/5988246.png" alt="House" class="svg-art image-art" />
   `,
 
   // Level 23: Book + Worm = BOOKWORM
   book: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M80 125 C65 115 40 115 25 120 L25 55 C40 50 65 50 80 60 C95 50 120 50 135 55 L135 120 C120 115 95 115 80 125 Z" fill="#F8FAFC" stroke="#3B82F6" stroke-width="4"/>
-      <path d="M80 130 C65 120 38 120 22 125 L22 120 M80 130 C95 120 122 120 138 125 L138 120" stroke="#1D4ED8" stroke-width="5"/>
-      <line x1="38" y1="72" x2="68" y2="70" stroke="#94A3B8" stroke-width="2.5"/>
-      <line x1="38" y1="85" x2="68" y2="83" stroke="#94A3B8" stroke-width="2.5"/>
-      <line x1="92" y1="70" x2="122" y2="72" stroke="#94A3B8" stroke-width="2.5"/>
-      <line x1="92" y1="83" x2="122" y2="85" stroke="#94A3B8" stroke-width="2.5"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFsMn6ZcucFVmGUQUkYDc1sd5SUcw4Y82F_EWxn-CCnw&s=10" alt="Book" class="svg-art image-art" />
   `,
   worm: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M35 115 Q50 85 65 115 Q80 135 95 105 Q110 75 125 90" stroke="#EC4899" stroke-width="14" stroke-linecap="round" fill="none"/>
-      <circle cx="125" cy="90" r="10" fill="#F472B6"/>
-      <circle cx="128" cy="87" r="2.5" fill="#1E293B"/>
-      <circle cx="126" cy="88" r="5" fill="none" stroke="#1E293B" stroke-width="2"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScbcTDxKUE9hGB9tbBasNEQ2M6EY-S1kxiZ-pIsLOSkw&s=10" alt="Worm" class="svg-art image-art" />
   `,
 
   // Level 24: Cup + Cake = CUPCAKE
   cup: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M45 55 L105 55 C105 95 95 115 75 115 C55 115 45 95 45 55 Z" fill="#F8FAFC" stroke="#0284C7" stroke-width="4"/>
-      <path d="M105 65 C125 65 125 100 100 100" stroke="#0284C7" stroke-width="5" stroke-linecap="round" fill="none"/>
-      <ellipse cx="75" cy="122" rx="45" ry="8" fill="#E2E8F0" stroke="#0284C7" stroke-width="3"/>
-      <path d="M65 42 Q60 30 70 20 M85 42 Q90 30 80 20" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" fill="none"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/1002/1002375.png" alt="Cup" class="svg-art image-art" />
   `,
   cake: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M35 110 L80 60 L135 75 L95 125 Z" fill="#FDE047" stroke="#CA8A04" stroke-width="3"/>
-      <path d="M35 110 L35 125 L95 140 L95 125 Z" fill="#EAB308"/>
-      <path d="M35 110 L80 60 L135 75 L125 85 L80 72 L35 110 Z" fill="#F43F5E"/>
-      <circle cx="80" cy="55" r="10" fill="#EF4444"/>
-      <polygon points="80,45 76,40 84,40" fill="#22C55E"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/3617/3617087.png" alt="Cake" class="svg-art image-art" />
   `,
 
   // Level 25: Straw + Berry = STRAWBERRY
   straw: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="80" cy="120" rx="35" ry="12" fill="#E2E8F0"/>
-      <path d="M60 125 L95 40 L115 32" stroke="#EF4444" stroke-width="12" stroke-linecap="round" fill="none"/>
-      <path d="M60 125 L95 40 L115 32" stroke="#FFFFFF" stroke-width="12" stroke-dasharray="10 10" stroke-linecap="round" fill="none"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG4CWVMqS3-gwJWFcb3iGSyKTx_S4QDeUKYrw3-kzWWA&s=10" alt="Straw" class="svg-art image-art" />
   `,
   berry: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="65" cy="95" r="22" fill="#6366F1" stroke="#4338CA" stroke-width="3"/>
-      <circle cx="95" cy="95" r="22" fill="#4F46E5" stroke="#3730A3" stroke-width="3"/>
-      <circle cx="80" cy="72" r="24" fill="#818CF8" stroke="#4338CA" stroke-width="3"/>
-      <polygon points="80,50 75,58 85,58" fill="#312E81"/>
-      <polygon points="65,75 60,82 70,82" fill="#312E81"/>
-      <polygon points="95,75 90,82 100,82" fill="#312E81"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/1360/1360864.png" alt="Berry" class="svg-art image-art" />
   `,
 
   // Level 26: Pan + Cake = PANCAKE
   pan: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="70" cy="85" rx="42" ry="28" fill="#334155" stroke="#1E293B" stroke-width="4"/>
-      <ellipse cx="70" cy="82" rx="36" ry="22" fill="#475569"/>
-      <path d="M105 95 L145 115" stroke="#1E293B" stroke-width="10" stroke-linecap="round"/>
-      <ellipse cx="68" cy="82" rx="14" ry="9" fill="#F8FAFC"/>
-      <circle cx="68" cy="82" r="6" fill="#FBBF24"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiNNnHHB4PFT2IqfyWPZRpccYQXfDt3yv8y9muSPX1qw&s=10" alt="Pan" class="svg-art image-art" />
   `,
 
   // Level 27: Ear + Ring = EARRING
   ear: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M60 40 C95 35 115 65 105 105 C98 130 75 135 65 120 C55 105 70 100 70 85 C70 65 55 55 60 40 Z" fill="#FED7AA" stroke="#EA580C" stroke-width="3"/>
-      <path d="M80 65 C88 75 85 95 75 95" stroke="#EA580C" stroke-width="3" stroke-linecap="round" fill="none"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/508/508740.png" alt="Ear" class="svg-art image-art" />
   `,
   ring: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="80" cy="95" rx="38" ry="32" fill="none" stroke="#F59E0B" stroke-width="9"/>
-      <ellipse cx="80" cy="95" rx="38" ry="32" fill="none" stroke="#FDE047" stroke-width="4"/>
-      <polygon points="80,38 95,52 80,68 65,52" fill="#67E8F9" stroke="#0891B2" stroke-width="2"/>
-      <polygon points="80,38 88,52 80,68 72,52" fill="#A5F3FC"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj2CN09Fr9m22i5qEVfLW1BdDmrJdPImQU63KISQrRrA&s=10" alt="Ring" class="svg-art image-art" />
   `,
 
   // Level 28: Tree + House = TREEHOUSE
   tree: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="72" y="90" width="16" height="45" rx="3" fill="#78350F"/>
-      <circle cx="80" cy="60" r="30" fill="#22C55E"/>
-      <circle cx="60" cy="75" r="24" fill="#16A34A"/>
-      <circle cx="100" cy="75" r="24" fill="#16A34A"/>
-      <circle cx="80" cy="45" r="22" fill="#4ADE80"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/489/489969.png" alt="Tree" class="svg-art image-art" />
   `,
 
   // Level 29: Candle + Light = CANDLELIGHT
   candle: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="62" y="70" width="36" height="65" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
-      <path d="M68 70 L68 85 M82 70 L82 80" stroke="#FDE68A" stroke-width="4" stroke-linecap="round"/>
-      <line x1="80" y1="70" x2="80" y2="58" stroke="#1E293B" stroke-width="3"/>
-      <path d="M80 32 C88 42 92 50 80 58 C68 50 72 42 80 32 Z" fill="#F59E0B"/>
-      <circle cx="80" cy="50" r="4" fill="#FEF08A"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/1357/1357793.png" alt="Candle" class="svg-art image-art" />
   `,
 
   // Level 30: Lip + Stick = LIPSTICK
   lip: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M30 85 C45 70 65 65 80 75 C95 65 115 70 130 85 C115 105 95 115 80 112 C65 115 45 105 30 85 Z" fill="#E11D48" stroke="#9F1239" stroke-width="3"/>
-      <path d="M35 85 Q80 95 125 85" stroke="#881337" stroke-width="3" fill="none"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_f1vj6nGnBaXfOzXLhKAd2V1VaOwAsuBGWIhzo_dN9Q&s=10" alt="Lip" class="svg-art image-art" />
   `,
   stick: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40 125 L120 45" stroke="#78350F" stroke-width="12" stroke-linecap="round"/>
-      <path d="M80 85 L95 75" stroke="#78350F" stroke-width="7" stroke-linecap="round"/>
-      <ellipse cx="98" cy="72" rx="7" ry="4" transform="rotate(-30 98 72)" fill="#22C55E"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/939/939445.png" alt="Stick" class="svg-art image-art" />
   `,
 
   // ==================== SET 2 ILLUSTRATIONS ====================
   // Water + Fall = WATERFALL
   water: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M80 25 C80 25 45 75 45 105 C45 125 60 142 80 142 C100 142 115 125 115 105 C115 75 80 25 80 25 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="4"/>
-      <path d="M68 95 C68 85 75 70 82 55" stroke="#BAE6FD" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="95" cy="115" r="7" fill="#E0F2FE"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/3105/3105807.png" alt="Water" class="svg-art image-art" />
   `,
   fall: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Cliff ledge -->
-      <path d="M20 50 L75 50 L75 140 L20 140 Z" fill="#64748B"/>
-      <!-- Falling leaf / object -->
-      <path d="M105 55 C120 70 125 95 100 110 C85 95 90 70 105 55 Z" fill="#F97316" stroke="#C2410C" stroke-width="3"/>
-      <!-- Motion lines -->
-      <path d="M100 35 L100 48 M120 42 L115 58 M90 75 L85 105" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
-    </svg>
+    <img src="https://static.thenounproject.com/png/1352921-200.png" alt="Fall" class="svg-art image-art" />
   `,
 
   // Water + Melon = WATERMELON
   melon: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Watermelon Slice -->
-      <path d="M30 50 C30 115 85 140 135 120 L30 50 Z" fill="#22C55E" stroke="#15803D" stroke-width="4"/>
-      <path d="M36 56 C36 108 82 130 126 114 L36 56 Z" fill="#EF4444"/>
-      <!-- Seeds -->
-      <ellipse cx="65" cy="85" rx="3" ry="5" transform="rotate(-30 65 85)" fill="#1E293B"/>
-      <ellipse cx="85" cy="95" rx="3" ry="5" transform="rotate(-15 85 95)" fill="#1E293B"/>
-      <ellipse cx="60" cy="102" rx="3" ry="5" transform="rotate(-40 60 102)" fill="#1E293B"/>
-      <ellipse cx="102" cy="100" rx="3" ry="5" transform="rotate(10 102 100)" fill="#1E293B"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2P4BV81siwMvwU0xVKBJtonJ1OGHKRLcmic3hiM5HbQ&s=10" alt="Melon" class="svg-art image-art" />
   `,
 
   // Sun + Shine = SUNSHINE
   shine: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Big Central Sparkle Star -->
-      <path d="M80 20 Q80 80 20 80 Q80 80 80 140 Q80 80 140 80 Q80 80 80 20 Z" fill="#FACC15" stroke="#EAB308" stroke-width="3"/>
-      <!-- Small Sparkles -->
-      <path d="M120 30 Q120 50 100 50 Q120 50 120 70 Q120 50 140 50 Q120 50 120 30 Z" fill="#FDE047"/>
-      <path d="M40 105 Q40 120 25 120 Q40 120 40 135 Q40 120 55 120 Q40 120 40 105 Z" fill="#FDE047"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/599/599695.png" alt="Shine" class="svg-art image-art" />
   `,
 
   // Sun + Glasses = SUNGLASSES
   glasses: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Frame Bridge -->
-      <path d="M70 75 Q80 68 90 75" stroke="#1E293B" stroke-width="5" fill="none"/>
-      <!-- Left Lens -->
-      <path d="M30 65 L70 65 C68 95 55 105 35 100 C25 95 25 75 30 65 Z" fill="#1E293B" stroke="#0F172A" stroke-width="3"/>
-      <path d="M36 72 L48 95" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
-      <!-- Right Lens -->
-      <path d="M90 65 L130 65 C135 75 135 95 125 100 C105 105 92 95 90 65 Z" fill="#1E293B" stroke="#0F172A" stroke-width="3"/>
-      <path d="M96 72 L108 95" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
-      <!-- Temples -->
-      <path d="M30 65 L18 58 M130 65 L142 58" stroke="#1E293B" stroke-width="4" stroke-linecap="round"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-_Ol1FwcWX0lRl3rN2mtGM9iblZMQHOHug9FhqSNDhw&s=10" alt="Glasses" class="svg-art image-art" />
   `,
 
   // Tree + Fruit = TREEFRUIT
   fruit: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Apple -->
-      <circle cx="65" cy="95" r="28" fill="#EF4444"/>
-      <path d="M65 67 Q68 55 75 52" stroke="#78350F" stroke-width="4" stroke-linecap="round"/>
-      <ellipse cx="60" cy="56" rx="8" ry="4" transform="rotate(-30 60 56)" fill="#22C55E"/>
-      <!-- Orange / Pear behind -->
-      <circle cx="102" cy="98" r="24" fill="#F97316"/>
-      <ellipse cx="102" cy="74" rx="4" ry="7" fill="#22C55E"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/1625/1625048.png" alt="Fruit" class="svg-art image-art" />
   `,
 
   // Pine + Apple = PINEAPPLE
   pine: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Pinecone / Evergreen Tree -->
-      <polygon points="80,25 115,70 95,70 125,110 35,110 65,70 45,70" fill="#15803D" stroke="#166534" stroke-width="3"/>
-      <rect x="72" y="110" width="16" height="25" fill="#78350F"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/2220/2220061.png" alt="Pine" class="svg-art image-art" />
   `,
   apple: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Apple Body -->
-      <path d="M80 55 C65 40 35 48 35 85 C35 125 70 138 80 138 C90 138 125 125 125 85 C125 48 95 40 80 55 Z" fill="#EF4444" stroke="#DC2626" stroke-width="3"/>
-      <!-- Stem -->
-      <path d="M80 55 Q83 35 95 30" stroke="#78350F" stroke-width="5" stroke-linecap="round"/>
-      <!-- Leaf -->
-      <path d="M82 45 C95 35 110 40 110 40 C110 40 105 55 90 52 Z" fill="#22C55E"/>
-      <ellipse cx="58" cy="75" rx="6" ry="14" transform="rotate(-20 58 75)" fill="#F87171"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/883/883341.png" alt="Apple" class="svg-art image-art" />
   `,
 
   // Apple + Pie = APPLEPIE
   pie: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Pie Crust & Dish -->
-      <ellipse cx="80" cy="115" rx="55" ry="20" fill="#D97706"/>
-      <path d="M25 95 Q80 125 135 95 L130 115 Q80 140 30 115 Z" fill="#B45309"/>
-      <!-- Pie Dome Crust with Lattice -->
-      <ellipse cx="80" cy="90" rx="55" ry="26" fill="#F59E0B" stroke="#D97706" stroke-width="3"/>
-      <!-- Lattice Slits -->
-      <path d="M60 85 L70 95 M75 80 L85 92 M90 85 L100 95" stroke="#92400E" stroke-width="4" stroke-linecap="round"/>
-      <!-- Steam -->
-      <path d="M65 60 Q60 50 68 40 M80 55 Q85 45 78 35 M95 60 Q90 50 98 40" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/817/817295.png" alt="Pie" class="svg-art image-art" />
   `,
 
   // Tooth + Fairy = TOOTHFAIRY
   fairy: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fairy Wings -->
-      <path d="M80 75 C45 35 25 60 45 90 C60 100 75 85 80 75 Z" fill="#A5F3FC" opacity="0.8"/>
-      <path d="M80 75 C115 35 135 60 115 90 C100 100 85 85 80 75 Z" fill="#A5F3FC" opacity="0.8"/>
-      <!-- Dress -->
-      <polygon points="80,75 65,125 95,125" fill="#EC4899"/>
-      <!-- Head & Hair -->
-      <circle cx="80" cy="58" r="14" fill="#FDE047"/>
-      <!-- Magic Wand -->
-      <line x1="90" y1="85" x2="120" y2="60" stroke="#F59E0B" stroke-width="3"/>
-      <polygon points="120,55 123,62 130,62 124,67 126,74 120,69 114,74 116,67 110,62 117,62" fill="#FBBF24"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5HOgcs7J9cmjvo3__T3MVD1ObugOELj_rvTWYNM9AA&s=10" alt="Fairy" class="svg-art image-art" />
   `,
 
   // Tooth + Ache = TOOTHACHE
   ache: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Tooth with pain band & lightning -->
-      <path d="M50 45 C45 30 70 25 80 30 C90 25 115 30 110 45 C105 60 115 90 100 130 C95 140 85 140 85 115 C85 95 75 95 75 115 C75 140 65 140 60 130 C45 90 55 60 50 45 Z" fill="#F8FAFC" stroke="#DC2626" stroke-width="4"/>
-      <!-- Ice pack / bandage on cheek -->
-      <path d="M40 70 Q80 120 120 70" stroke="#38BDF8" stroke-width="12" stroke-linecap="round" fill="none"/>
-      <!-- Pain flash / lightning -->
-      <polygon points="80,25 72,45 84,45 74,68 92,42 80,42" fill="#EF4444"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9yQnZ-KHPuYa5wDj7vsImNbPWBfOtqlVfkR1NUuE0Q&s=10" alt="Ache" class="svg-art image-art" />
   `,
 
   // Ear + Drum = EARDRUM
   drum: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Drum Body -->
-      <path d="M35 70 L35 110 C35 125 125 125 125 110 L125 70 Z" fill="#DC2626" stroke="#B91C1C" stroke-width="3"/>
-      <!-- Top Drumhead -->
-      <ellipse cx="80" cy="70" rx="45" ry="18" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
-      <!-- Tuning Strings -->
-      <path d="M45 78 L60 118 L75 78 L90 118 L105 78 L115 115" stroke="#FEF08A" stroke-width="3" fill="none"/>
-      <!-- Drumsticks -->
-      <line x1="30" y1="35" x2="72" y2="65" stroke="#78350F" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="74" cy="67" r="4" fill="#B45309"/>
-      <line x1="130" y1="35" x2="88" y2="65" stroke="#78350F" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="86" cy="67" r="4" fill="#B45309"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUayFbZYtwvMdpPyDjEd-OyIola0SpDHmNxwxLFrNbZQ&s=10" alt="Drum" class="svg-art image-art" />
   `,
 
   // Eye + Ball = EYEBALL / Eye + Glass = EYEGLASS
   eye: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Eye Outline -->
-      <path d="M25 80 C45 45 115 45 135 80 C115 115 45 115 25 80 Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
-      <!-- Iris -->
-      <circle cx="80" cy="80" r="24" fill="#0EA5E9"/>
-      <!-- Pupil -->
-      <circle cx="80" cy="80" r="13" fill="#0F172A"/>
-      <!-- Catchlight Sparkle -->
-      <circle cx="74" cy="74" r="5" fill="#FFFFFF"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe3fPRullAgT2bFsxZACylcSwRXVy-FWMg5mi0gi2PjQ&s=10" alt="Eye" class="svg-art image-art" />
   `,
   glass: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Drinking Glass -->
-      <path d="M45 35 L55 130 C56 138 104 138 105 130 L115 35 Z" fill="#E0F2FE" stroke="#0284C7" stroke-width="4"/>
-      <!-- Water Fill -->
-      <path d="M52 70 L56 126 C60 134 100 134 104 126 L108 70 Z" fill="#38BDF8"/>
-      <ellipse cx="80" cy="70" rx="28" ry="7" fill="#BAE6FD"/>
-      <!-- Ice Cube -->
-      <rect x="70" y="78" width="18" height="18" rx="3" fill="#FFFFFF" opacity="0.8"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf0pJNs7xq3yC3P0Wj7z8GbgDuQqdv5R-JGG0tHOzwUQ&s=10" alt="Glass" class="svg-art image-art" />
   `,
 
   // Foot + Print = FOOTPRINT / Foot + Step = FOOTSTEP
   print: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Footprint Sole -->
-      <ellipse cx="78" cy="98" rx="18" ry="28" fill="#3B82F6"/>
-      <ellipse cx="82" cy="62" rx="14" ry="18" fill="#3B82F6"/>
-      <!-- Toes -->
-      <circle cx="62" cy="40" r="6" fill="#3B82F6"/>
-      <circle cx="75" cy="36" r="5" fill="#3B82F6"/>
-      <circle cx="87" cy="38" r="4.5" fill="#3B82F6"/>
-      <circle cx="97" cy="42" r="4" fill="#3B82F6"/>
-      <circle cx="105" cy="48" r="3.5" fill="#3B82F6"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/2832/2832794.png" alt="Print" class="svg-art image-art" />
   `,
   step: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- 3D Stairs / Steps -->
-      <polygon points="30,130 70,130 70,100 30,100" fill="#94A3B8"/>
-      <polygon points="70,130 90,115 90,85 70,100" fill="#64748B"/>
-      <polygon points="30,100 70,100 90,85 50,85" fill="#CBD5E1"/>
-
-      <polygon points="50,85 90,85 90,55 50,55" fill="#94A3B8"/>
-      <polygon points="90,85 110,70 110,40 90,55" fill="#64748B"/>
-      <polygon points="50,55 90,55 110,40 70,40" fill="#CBD5E1"/>
-
-      <polygon points="70,40 110,40 130,25 90,25" fill="#E2E8F0"/>
-    </svg>
+    <img src="https://static.thenounproject.com/png/87667-200.png" alt="Step" class="svg-art image-art" />
   `,
 
   // Hand + Bag = HANDBAG / Hand + Shake = HANDSHAKE / Hand + Soap = HANDSOAP
   hand: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Palm -->
-      <path d="M45 75 C45 60 55 58 55 75 L55 50 C55 38 65 38 65 50 L65 42 C65 30 75 30 75 42 L75 48 C75 36 85 36 85 48 L85 85 C85 115 70 135 55 135 C40 135 35 115 35 95 L35 85 C35 75 45 75 45 75 Z" fill="#FBBF24" stroke="#D97706" stroke-width="3"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/2775/2775745.png" alt="Hand" class="svg-art image-art" />
   `,
   bag: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Handbag Handle -->
-      <path d="M60 70 C60 40 100 40 100 70" stroke="#D97706" stroke-width="6" fill="none" stroke-linecap="round"/>
-      <!-- Bag Body -->
-      <path d="M40 70 L120 70 L130 130 C130 135 125 138 120 138 L40 138 C35 138 30 135 30 130 Z" fill="#E11D48" stroke="#BE185D" stroke-width="3"/>
-      <!-- Clasp / Gold Lock -->
-      <rect x="72" y="70" width="16" height="20" rx="3" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
-    </svg>
+    <img src="https://static.vecteezy.com/system/resources/previews/010/248/955/non_2x/school-bag-icon-icon-related-to-education-line-icon-style-simple-design-editable-vector.jpg" alt="Bag" class="svg-art image-art" />
   `,
   shake: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Left Hand -->
-      <path d="M25 65 L60 90 L85 80 L70 60 Z" fill="#FBBF24" stroke="#D97706" stroke-width="3"/>
-      <!-- Right Hand Gripping -->
-      <path d="M135 65 L100 90 L75 80 L90 60 Z" fill="#F87171" stroke="#DC2626" stroke-width="3"/>
-      <!-- Clasp Fingers -->
-      <path d="M65 75 Q80 95 95 75" stroke="#1E293B" stroke-width="4" fill="none"/>
-      <!-- Sparkle of Agreement -->
-      <polygon points="80,45 83,52 90,52 84,57 86,64 80,59 74,64 76,57 70,52 77,52" fill="#FACC15"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYaJjiDvsvwAk8DzggrBlVzWPdt5xwyvWvR9mpNcjYYkHusQqi391bH-n&s=10" alt="Shake" class="svg-art image-art" />
   `,
   soap: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Soap Bar -->
-      <rect x="40" y="75" width="80" height="48" rx="16" fill="#2DD4BF" stroke="#0D9488" stroke-width="4"/>
-      <ellipse cx="65" cy="90" rx="14" ry="6" fill="#99F6E4"/>
-      <!-- Bubbles -->
-      <circle cx="55" cy="50" r="14" fill="#A5F3FC" stroke="#0891B2" stroke-width="2" opacity="0.85"/>
-      <circle cx="50" cy="46" r="4" fill="#FFFFFF"/>
-      <circle cx="95" cy="42" r="18" fill="#A5F3FC" stroke="#0891B2" stroke-width="2" opacity="0.85"/>
-      <circle cx="89" cy="36" r="5" fill="#FFFFFF"/>
-      <circle cx="115" cy="65" r="10" fill="#A5F3FC" stroke="#0891B2" stroke-width="2" opacity="0.85"/>
-    </svg>
+    <img src="https://cdn-icons-png.flaticon.com/512/6855/6855612.png" alt="Soap" class="svg-art image-art" />
   `,
 
   // Mail + Box = MAILBOX
   mail: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Envelope -->
-      <rect x="30" y="50" width="100" height="65" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="3"/>
-      <path d="M30 52 L80 90 L130 52" stroke="#64748B" stroke-width="3" fill="none"/>
-      <!-- Stamp -->
-      <rect x="105" y="58" width="18" height="22" fill="#EF4444" stroke="#DC2626" stroke-width="1"/>
-    </svg>
+    <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-mail-icon-vector-illustration-in-line-style-for-any-purpose-png-image_4257766.jpg" alt="Mail" class="svg-art image-art" />
   `,
   box: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Cardboard Box 3D -->
-      <polygon points="80,35 130,60 80,85 30,60" fill="#D97706"/>
-      <polygon points="30,60 80,85 80,135 30,110" fill="#B45309"/>
-      <polygon points="80,85 130,60 130,110 80,135" fill="#92400E"/>
-      <!-- Tape -->
-      <polygon points="75,37 85,42 85,87 75,82" fill="#FDE68A"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrTe-x8mxPpJfDr1T840Tx0AwHT5EojH_-tKHgAz6TFg&s=10" alt="Box" class="svg-art image-art" />
   `,
 
   // Special Combined Badges
   successCrown: `
-    <svg viewBox="0 0 120 120" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="60,25 75,55 105,40 92,85 28,85 15,40 45,55" fill="#FBBF24" stroke="#D97706" stroke-width="3"/>
-      <circle cx="15" cy="40" r="5" fill="#EF4444"/>
-      <circle cx="60" cy="25" r="6" fill="#3B82F6"/>
-      <circle cx="105" cy="40" r="5" fill="#10B981"/>
-    </svg>
+    <img src="https://img.magnific.com/free-vector/crown-filled-line-style_78370-9590.jpg?semt=ais_hybrid&w=740&q=80" alt="Crown" class="svg-art image-art" />
   `,
   trophy: `
-    <svg viewBox="0 0 160 160" class="svg-art" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M48 45 L112 45 L102 95 C98 110 62 110 58 95 Z" fill="#FBBF24" stroke="#D97706" stroke-width="4"/>
-      <!-- Handles -->
-      <path d="M48 55 C28 55 28 85 52 85" stroke="#F59E0B" stroke-width="5" stroke-linecap="round" fill="none"/>
-      <path d="M112 55 C132 55 132 85 108 85" stroke="#F59E0B" stroke-width="5" stroke-linecap="round" fill="none"/>
-      <!-- Base & Stem -->
-      <rect x="74" y="105" width="12" height="20" fill="#D97706"/>
-      <rect x="50" y="125" width="60" height="15" rx="4" fill="#78350F" stroke="#92400E" stroke-width="2"/>
-      <!-- Star on Cup -->
-      <polygon points="80,62 84,72 95,72 86,79 89,89 80,83 71,89 74,79 65,72 76,72" fill="#FEF08A"/>
-    </svg>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvKybrl65T6Mvke1TnXj8FLNGlD4yqpYoQ3yxQ92y3KcgQD9iYZn2TCpNC&s=10" alt="Trophy" class="svg-art image-art" />
   `
 };

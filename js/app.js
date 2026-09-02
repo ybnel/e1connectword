@@ -1,21 +1,22 @@
 import { ILLUSTRATIONS } from './illustrations.js';
-import { QUESTION_SETS, LEVELS_DATA } from './data.js';
+import { LEVELS_DATA } from './data.js';
 import { audio } from './audio.js';
 import { confetti } from './confetti.js';
 
 class BattleGameApp {
   constructor() {
-    this.selectedSet = 'all'; // 'all', 'set1', or 'set2'
     this.targetScore = 5;
     this.roundTimeMax = 15;
     this.roundTimeRemaining = 15;
     this.timerInterval = null;
+    this.pendingTimeouts = [];
     this.isRoundLocked = false;
 
     this.p1Score = 0;
     this.p2Score = 0;
     this.currentRoundIndex = 0;
     this.shuffledLevels = [];
+    this.usedQuestionsHistory = new Set();
 
     this.p1State = {
       inputLetters: [],
@@ -42,11 +43,11 @@ class BattleGameApp {
 
     // Header buttons
     this.btnSoundToggle = document.getElementById('btn-sound-toggle');
+    this.btnFullscreen = document.getElementById('btn-fullscreen');
     this.btnHowToPlay = document.getElementById('btn-how-to-play');
     this.btnReturnLobby = document.getElementById('btn-return-lobby');
 
     // Lobby Elements
-    this.setBtns = document.querySelectorAll('.set-btn');
     this.targetBtns = document.querySelectorAll('.target-btn');
     this.btnStartBattle = document.getElementById('btn-start-battle');
 
@@ -93,10 +94,23 @@ class BattleGameApp {
   }
 
   bindEvents() {
+    // Set initial sound button icon
+    this.btnSoundToggle.innerHTML = audio.isMuted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
+
     // Sound toggle
     this.btnSoundToggle.addEventListener('click', () => {
       const muted = audio.toggleMute();
-      this.btnSoundToggle.textContent = muted ? '🔇' : '🔊';
+      this.btnSoundToggle.innerHTML = muted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
+    });
+
+    // Fullscreen toggle (TV Mode)
+    if (this.btnFullscreen) {
+      this.btnFullscreen.addEventListener('click', () => this.toggleFullscreen());
+    }
+    document.addEventListener('fullscreenchange', () => {
+      if (this.btnFullscreen) {
+        this.btnFullscreen.innerHTML = document.fullscreenElement ? '<i class="bi bi-fullscreen-exit"></i>' : '<i class="bi bi-fullscreen"></i>';
+      }
     });
 
     // How to Play Modal
@@ -111,8 +125,7 @@ class BattleGameApp {
 
     // Return to Lobby button
     this.btnReturnLobby.addEventListener('click', () => {
-      if (confirm('Kembali ke menu utama? Pertandingan yang sedang berjalan akan direset.')) {
-        this.clearIntervalTimer();
+      if (confirm('Return to main menu? The current match will be reset.')) {
         this.showLobbyScreen();
       }
     });
@@ -151,13 +164,38 @@ class BattleGameApp {
       this.showLobbyScreen();
     });
 
-    // Physical Keyboard Input (Player 1 Left Keyboard support)
+    // TV & Keyboard Hotkeys
     window.addEventListener('keydown', (e) => {
-      if (this.modalVersusChampion.classList.contains('active') || this.modalHowToPlay.classList.contains('active')) {
-        if (e.key === 'Escape') {
+      // Fullscreen shortcut F
+      if (e.key === 'F11') return; // let browser handle F11 naturally
+
+      if (this.modalVersusChampion.classList.contains('active')) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.btnRematchVersus.click();
+        } else if (e.key === 'Escape') {
+          this.btnLobbyFromModal.click();
+        }
+        return;
+      }
+
+      if (this.modalHowToPlay.classList.contains('active')) {
+        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
           this.modalHowToPlay.classList.remove('active');
         }
         return;
+      }
+
+      if (this.screenLobby.classList.contains('active-screen')) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.startCountdownAndBattle();
+          return;
+        }
+        if (e.key === 'f' || e.key === 'F') {
+          this.toggleFullscreen();
+          return;
+        }
       }
 
       if (this.screenBattle.classList.contains('active-screen') && !this.isRoundLocked) {
@@ -171,13 +209,48 @@ class BattleGameApp {
     });
   }
 
+  safeTimeout(fn, delay) {
+    const id = setTimeout(() => {
+      this.pendingTimeouts = this.pendingTimeouts.filter(t => t !== id);
+      fn();
+    }, delay);
+    this.pendingTimeouts.push(id);
+    return id;
+  }
+
+  clearAllPendingTimers() {
+    this.clearIntervalTimer();
+    if (this.pendingTimeouts && this.pendingTimeouts.length > 0) {
+      this.pendingTimeouts.forEach(id => clearTimeout(id));
+      this.pendingTimeouts = [];
+    }
+    audio.stopAll();
+  }
+
+  toggleFullscreen() {
+    audio.playTap();
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+  }
+
   showLobbyScreen() {
+    this.clearAllPendingTimers();
+    this.isRoundLocked = true;
     this.screenBattle.classList.remove('active-screen');
+    this.countdownOverlay.classList.remove('active');
+    this.modalVersusChampion.classList.remove('active');
+    this.modalHowToPlay.classList.remove('active');
     this.screenLobby.classList.add('active-screen');
     this.btnReturnLobby.style.display = 'none';
   }
 
   startCountdownAndBattle() {
+    this.clearAllPendingTimers();
     audio.playTap();
     this.screenLobby.classList.remove('active-screen');
     this.screenBattle.classList.add('active-screen');
@@ -188,14 +261,32 @@ class BattleGameApp {
     this.currentRoundIndex = 0;
     this.p1ScoreText.textContent = '0';
     this.p2ScoreText.textContent = '0';
-    this.targetIndicatorText.textContent = `Target: ${this.targetScore} Poin`;
+    this.targetIndicatorText.textContent = `Target: ${this.targetScore} Points`;
 
-    // Shuffle 30 levels
-    this.shuffledLevels = [...LEVELS_DATA];
-    for (let i = this.shuffledLevels.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [this.shuffledLevels[i], this.shuffledLevels[j]] = [this.shuffledLevels[j], this.shuffledLevels[i]];
+    // Pool of all questions (60 total)
+    const basePool = LEVELS_DATA;
+
+    // Filter out questions that have already been played recently
+    let availablePool = basePool.filter(q => !this.usedQuestionsHistory.has(q.answer));
+
+    // If available questions are fewer than 20, reset history to reuse pool cleanly
+    if (availablePool.length < 20) {
+      this.usedQuestionsHistory.clear();
+      availablePool = [...basePool];
     }
+
+    // Fisher-Yates shuffle the pool to guarantee randomness
+    const shuffled = [...availablePool];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    // Take exactly 20 unique questions for this match session (no duplicates)
+    this.shuffledLevels = shuffled.slice(0, 20);
+
+    // Record these 20 questions into history so subsequent matches don't repeat them
+    this.shuffledLevels.forEach(q => this.usedQuestionsHistory.add(q.answer));
 
     // High-energy, smooth animated countdown
     const steps = [
@@ -228,7 +319,7 @@ class BattleGameApp {
         }
 
         currentStep++;
-        setTimeout(playStep, 800);
+        this.safeTimeout(playStep, 800);
       } else {
         this.countdownOverlay.classList.remove('active');
         this.renderRound(0);
@@ -236,6 +327,20 @@ class BattleGameApp {
     };
 
     playStep();
+  }
+
+  renderIllustrationHTML(iconKey, partData) {
+    const raw = ILLUSTRATIONS[iconKey];
+    if (!raw) return `<div class="text-fallback">${partData?.text || ''}</div>`;
+    const trimmed = raw.trim();
+    if (trimmed.startsWith('<svg') || trimmed.startsWith('<img') || trimmed.startsWith('<div')) {
+      return trimmed;
+    }
+    // If it's a direct URL string (http/https/data:/relative path)
+    if (trimmed.startsWith('http') || trimmed.startsWith('data:') || trimmed.startsWith('/') || trimmed.startsWith('.')) {
+      return `<img src="${trimmed}" alt="${partData?.text || 'Illustration'}" class="svg-art image-art" />`;
+    }
+    return trimmed;
   }
 
   renderRound(roundIdx) {
@@ -251,16 +356,14 @@ class BattleGameApp {
     const data = this.shuffledLevels[roundIdx];
 
     // Update Round Headers
-    this.versusRoundBadge.textContent = `Ronde ${roundIdx + 1}`;
+    this.versusRoundBadge.textContent = `Round ${roundIdx + 1}`;
     this.versusCategoryText.textContent = `🏷️ ${data.category}`;
     this.versusRoundToast.className = 'round-toast';
-    this.versusRoundToast.textContent = `⚡ Siap... Balapan Tebak Kata Dimulai!`;
+    this.versusRoundToast.textContent = `⚡ Ready... Word Race Starts!`;
 
     // Render Shared Visual Cards
-    const svg1 = ILLUSTRATIONS[data.part1.iconKey] || `<div>${data.part1.text}</div>`;
-    const svg2 = ILLUSTRATIONS[data.part2.iconKey] || `<div>${data.part2.text}</div>`;
-    this.versusArt1.innerHTML = svg1;
-    this.versusArt2.innerHTML = svg2;
+    this.versusArt1.innerHTML = this.renderIllustrationHTML(data.part1.iconKey, data.part1);
+    this.versusArt2.innerHTML = this.renderIllustrationHTML(data.part2.iconKey, data.part2);
 
     // Reset Player 1 Deck
     this.p1State.inputLetters = new Array(data.answer.length).fill(null);
@@ -433,13 +536,13 @@ class BattleGameApp {
       this.p1Score++;
       this.p1ScoreText.textContent = this.p1Score;
       this.versusRoundToast.className = 'round-toast p1-scored';
-      this.versusRoundToast.textContent = `🎉 PLAYER 1 MENEBAK BENAR! (+1 Poin)`;
+      this.versusRoundToast.textContent = `🎉 PLAYER 1 SCORED! (+1 Point)`;
       confetti.fire(60, { x: 0.25, y: 0.5 });
     } else {
       this.p2Score++;
       this.p2ScoreText.textContent = this.p2Score;
       this.versusRoundToast.className = 'round-toast p2-scored';
-      this.versusRoundToast.textContent = `🎉 PLAYER 2 MENEBAK BENAR! (+1 Poin)`;
+      this.versusRoundToast.textContent = `🎉 PLAYER 2 SCORED! (+1 Point)`;
       confetti.fire(60, { x: 0.75, y: 0.5 });
     }
 
@@ -447,9 +550,9 @@ class BattleGameApp {
     audio.speakWord(currentAnswer);
 
     if (this.p1Score >= this.targetScore || this.p2Score >= this.targetScore) {
-      setTimeout(() => this.triggerChampionScreen(), 1500);
+      this.safeTimeout(() => this.triggerChampionScreen(), 1500);
     } else {
-      setTimeout(() => {
+      this.safeTimeout(() => {
         this.renderRound(this.currentRoundIndex + 1);
       }, 2000);
     }
@@ -493,10 +596,10 @@ class BattleGameApp {
 
     const targetWord = this.shuffledLevels[this.currentRoundIndex].answer;
     this.versusRoundToast.className = 'round-toast';
-    this.versusRoundToast.textContent = `⏱️ Waktu Habis! Jawabannya: ${targetWord}`;
+    this.versusRoundToast.textContent = `⏱️ Time's Up! The answer was: ${targetWord}`;
     audio.speakWord(targetWord);
 
-    setTimeout(() => {
+    this.safeTimeout(() => {
       this.renderRound(this.currentRoundIndex + 1);
     }, 2200);
   }
@@ -507,14 +610,14 @@ class BattleGameApp {
     confetti.fireGrand();
 
     if (this.p1Score > this.p2Score) {
-      this.versusChampionTitle.textContent = '👑 PLAYER 1 MENANG!';
-      this.versusChampionSubtitle.textContent = `Selamat Player 1 meraih ${this.p1Score} poin!`;
+      this.versusChampionTitle.textContent = '👑 PLAYER 1 WINS!';
+      this.versusChampionSubtitle.textContent = `Congratulations Player 1 scored ${this.p1Score} points!`;
     } else if (this.p2Score > this.p1Score) {
-      this.versusChampionTitle.textContent = '👑 PLAYER 2 MENANG!';
-      this.versusChampionSubtitle.textContent = `Selamat Player 2 meraih ${this.p2Score} poin!`;
+      this.versusChampionTitle.textContent = '👑 PLAYER 2 WINS!';
+      this.versusChampionSubtitle.textContent = `Congratulations Player 2 scored ${this.p2Score} points!`;
     } else {
-      this.versusChampionTitle.textContent = '🤝 HASIL IMBANG!';
-      this.versusChampionSubtitle.textContent = `Pertandingan sengit dengan skor seri!`;
+      this.versusChampionTitle.textContent = "🤝 IT'S A DRAW!";
+      this.versusChampionSubtitle.textContent = 'Intense battle tied with equal scores!';
     }
 
     this.versusFinalScoreText.textContent = `🔵 ${this.p1Score} - ${this.p2Score} 🔴`;

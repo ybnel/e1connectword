@@ -150,6 +150,14 @@ export class AudioManager {
       console.warn('Speech synthesis error', e);
     }
   }
+
+  stopAll() {
+    if ('speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch (e) {}
+    }
+  }
 }
 
 export const audio = new AudioManager();
